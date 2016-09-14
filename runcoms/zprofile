@@ -75,3 +75,9 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
+
+
+export NODE_PATH=/usr/lib/node_modules
+alias def="/usr/bin/sdcv"
+
+export PATH=$HOME/bin:$PATH

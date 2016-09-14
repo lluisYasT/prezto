@@ -11,3 +11,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+
+function copia_fotos {
+  cd /Data/Fotos
+  exiftool -v -o . '-Directory<DateTimeOriginal' -d %Y/%m/%d /run/media/lluis/EOS_DIGITAL/DCIM/100CANON
+}
