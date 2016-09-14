@@ -21,3 +21,7 @@ if (( $+commands[fortune] )); then
     print
   fi
 fi
+
+eval $(keychain --quiet --eval --agents "ssh,gpg" $(ls ~/.ssh/ | egrep -v '*.pub|config|authorized_keys|known_hosts')) 2>/dev/null
+
+[[ -z $DISPLAY && -z $SSH_TTY && -z $TMUX ]] && exec startx
